@@ -1,54 +1,84 @@
-\documentclass[11pt,a4paper,sans,expansion=false]{moderncv}
+\documentclass[10pt,a4paper,serif,expansion=false]{moderncv}
 
-% ModernCV themes
-\moderncvstyle{classic} % Options: 'casual', 'classic', 'banking', 'oldstyle', 'fancy'
-\moderncvcolor{blue}    % Options: 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
-% Adjust the page margins
+
+
+% ---------- Theme ----------
+\moderncvstyle{classic}   % casual | classic | banking | oldstyle | fancy
+\moderncvcolor{blue}      % blue | orange | green | red | purple | grey | black
 \usepackage[scale=0.75]{geometry}
 
-% Personal Information
+% Width of the left ("date") column
+\setlength{\hintscolumnwidth}{2.6cm}
+\AtBeginDocument{\recomputecvlengths}
+
+% ---------- Personal information ----------
 \name{}{Shin JeongBean}
 \title{Curriculum Vitae}
-\email{B10104030@ntu.edu.tw}
-
+\email{shinjeongbean@gmail.com / B10104030@ntu.edu.tw}
+% \homepage{...}          % personal website, if any
+\extrainfo{ORCID: 0009-0004-7856-142X}  % ORCID, if any
 
 \begin{document}
 \makecvtitle
 
+% ============================================================
 \section{Education}
-%--------------------------
-\cventry{2021--present}{B.A. in Philosophy}{National Taiwan University}{Taipei}{\textit{GPA: 4.12/4.3}}{Expected graduation: June 2027}
-%------------------------
-\section{Area of Interest}
-%-----------------------
-\cvitem{}{Metaphysics, Metametaphysics, Philosophy of Art, Classical Chinese Philosophy}
-\section{Scholarships and Awards}
-\cvitem{2026}{National Taiwan University System President's Award}
-\cvitem{2025 Fall}{Academic Achievement Award}
-\cvitem{2023}{The 13th National Taiwan University Student Laureate for Philosophical Treatise}
-\cvitem{2023 Spring}{Academic Achievement Award}
-\cvitem{2022 Fall}{Academic Achievement Award}
-\cvitem{2022-2023}{NTU Scholarship for International Degree Student}
-\cvitem{2021 Fall}{Academic Achievement Award}
-%%----------------------
+\cventry{2021--present}{B.A.\ in Philosophy}{National Taiwan University}{Taipei, Taiwan}{\textit{GPA: 4.14/4.3} (3.97/4.0, with A+ counted as 4.0)}{Expected graduation: June 2027. Leave of absence for mandatory military service in South Korea, Oct 2023 \textbf{--} Apr 2025.}
+
+% ============================================================
+\section{Areas of Interest}
+\cvitem{}{Metaphysics, Metametaphysics, Philosophical Logic, Philosophy of Art}
+
+% ============================================================
 \section{Presentations}
-%---------------------------
-\cvitem{}{``Essentialism and the Essence of to be Necessary'', TAPSC 2026, Soochow University, Taipei, Taiwan. April 2026.}
-\cvitem{}{``Commentary on Lin Siao-Ting's `A Fragmentalist Passage of Time' '', TAPSC 2026, Soochow University, Taipei, Taiwan. April 2026.}
-%------------------------
+\cvitem{Nov 2026}{(forthcoming) \emph{Belief Revision with Truthmaker Semantics} (refereed). Taiwan Philosophical Association Annual Conference 2026, National Chung Cheng University, Chiayi, Taiwan.}
+\cvitem{Apr 2026}{\emph{Essentialism and the Essence of what it is to be Necessary} (refereed). TAPSC 2026, Soochow University, Taipei, Taiwan. (A version is under review at \emph{Philosophical Studies}.)}
+
+% ===========================================================
+\section{Commentary}
+\cvitem{Apr 2026}{Commentator on Lin Siao-Ting, ``A Fragmentalist Passage of Time''. TAPSC 2026, Soochow University, Taipei, Taiwan.}
+
+% ============================================================
+\section{Teaching Experience}
+\cventry{Fall 2026}{Teaching Assistant \textmd{(in progress)}}{National Taiwan University}{PHL1921 \emph{Using AI to Tackle Philosophical Questions about Truth in Fiction}}{Instructor: Prof.\ Hsien-Chieh Nihel Jhou.}
+  {\footnotesize \textcolor{color1}{General-education course, taught in English. Deliver a short lecture and lead discussion in most of the weekly three-hour sessions; grading group presentations and the final exam.}}
+% ============================================================
+\section{Works in Progress}
+% TODO: add advisor name to the thesis entry if desired.
+\cventry{}{\textmd{\emph{Essentialism and the Essence of what it is to be Necessary}}}{}{Under review at \emph{Philosophical Studies}, Springer}{}
+  {\footnotesize \textcolor{color1}{I argue that if necessity is grounded in essence, the necessity of essence should be essential to what it is to be necessary.}}
+\cventry{}{\textmd{\emph{Belief Revision with Truthmaker Semantics}}}{}{}{}
+  {\footnotesize \textcolor{color1}{I develop several hyperintensional AGM-style belief revision frameworks with the resources from Finean truthmaker semantics to model local rationality.}}
+\cventry{}{\textmd{\emph{Demystifying Anchoring}}}{}{B.A.\ thesis, National Taiwan University. Advisor: Prof.\ Duen-Min Deng.}{}
+  {\footnotesize \textcolor{color1}{I argue that anchoring need not be a \textit{sui generis} metaphysical relation by examining various possible cases of exportation.}}
+\cventry{}{\textmd{\emph{Abstract Object Theory and the Fictionally Fictional}}}{}{NSTC Research Project for College Students. Advisor: Prof.\ Hsien-Chieh Nihel Jhou.}{}
+  {\footnotesize \textcolor{color1}{I present a counterargument against Zalta's abstract object theory from the case of fictional fictions and their objects.}}
+
+% ============================================================
 \section{Graduate Coursework}
-%-------------------------
-\cventry{2026 Spring}{PHL 7763 Epistemic Logic}{Prof. Chin-Mu Yang}{National Taiwan University}{In progress}{}
-\cventry{2026 Spring}{PHL 7599 Wittgenstein's Philosophical Investigations \S\S 185-693}{Prof. Christian Helmut Wenzel}{National Taiwan University}{In progress}{}
-\cventry{2026 Spring}{PHL 7599 The Philosophy of Bertrand Russell 1896-1900}{Prof. Duen-Min Deng}{National Taiwan University}{In progress}{}
-\cventry{2026 Spring}{PHL 7952 Zeno's Paradoxes}{Prof. Duen-Min Deng}{National Taiwan University}{}{In progress}
-\cventry{2025 Fall}{PHL 7598 Essence and Essentialism}{Prof. Duen-Min Deng}{National Taiwan University}{A+}{}
-\cventry{2025 Fall}{PHL 7557 Wittgenstein's Philosophical Investigations \S\S 1-184}{Prof. Christian Helmut Wenzel}{National Taiwan University}{A+}{}
-\cventry{2025 Fall}{PHL 7950 Machine Ethics}{Prof. Rong-Lin Wang}{National Taiwan University}{A}{}
-%---------------------------------
+\cvitem{Fall 2026}{PHL~7954, Hyperintensionalism (in progress)}
+\cvitem{Spring 2026}{PHL~7763, Epistemic Logic; PHL~7599, The Philosophy of Bertrand Russell, 1896--1900; PHL~7952, Zeno's Paradoxes; PHL~7558, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,185--693}
+\cvitem{Fall 2025}{PHL~7598, Essence and Essentialism; PHL~7557, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,1--184; PHL~7950, Machine Ethics}
+
+% ============================================================
+\section{Scholarships and Awards}
+\cvitem{2026}{National Science and Technology Council (NSTC) Research Project for College Students (research grant), Jul 2026 \textbf{--} Feb 2027.}
+\cventry{2026}{\textmd{National Taiwan University System President's Award}}{}{}{}{\footnotesize \textcolor{color1}{Newly established in 2026; awarded to international students at NTU, NTNU, and NTUST who received the Academic Achievement Award at least twice within four years.}}
+\cvitem{2023}{The 13th National Taiwan University Student Laureate for Philosophical Treatise, 4th prize.}
+\cvitem{2022, 2026}{NTU Scholarship for International Degree Students}
+\cventry{2021--23, 2025--26}{\textmd{Academic Achievement Award}}{}{}{{\small 2021 Fall; 2022 Fall; 2023 Spring; 2025 Fall; 2026 Spring}}{\footnotesize \textcolor{color1}{Awarded each semester to approximately the top 5\% of students in the department.}}
+
+% ============================================================
 \section{Academic Activities}
-%-----------------------------
-\cventry{2026-present}{NTU Logic}{Founder and leader}{}{}{Materials: Boolos et al. (2007) \textit{Computability and Logic}; Priest (2008) \textit{An Introduction to Non-Classical Logic}; Bacon (2023) \textit{A Philosophical Introduction to Higher-order Logics}}
-\cventry{2026-present}{Category Theory}{Participant}{}{}{Material: Smith (forthcoming) \textit{Introduction to Category Theory}}
-\cventry{2025-present}{Philosophy of Music Reading Club}{Founder and Leader}{}{}{}
+\cventry{2026--present}{NTU Logic}{Founder and Organizer}{}{}{\footnotesize \textcolor{color1}{Weekly reading group founded with 9 participants from philosophy and mathematics (undergraduate and graduate). Texts: Boolos et al.\ (2007), \emph{Computability and Logic}; Priest (2008), \emph{An Introduction to Non-Classical Logic}; Bacon (2023), \emph{A Philosophical Introduction to Higher-Order Logics}}}
+\cventry{2025--present}{Philosophy of Music Study Group}{Founder and Organizer}{}{}{\footnotesize \textcolor{color1}{Interdisciplinary reading group of six regular members (backgrounds in philosophy, art history, piano performance, and computer science), meeting biweekly on average; each session is devoted to a selected paper/book chapter in the philosophy of music.}}
+\cventry{Spring 2026}{Category Theory Study Group}{Participant}{}{}{{\footnotesize \textcolor{color1}{Biweekly reading group of undergraduate and graduate students; text: Smith (forthcoming), \emph{Category Theory: A Gentle Introduction.}}}}
+
+
+% ============================================================
+\section{Skills}
+\cvitem{Languages}{Korean (native); English (fluent: TOEFL iBT, July 2026: 5.5/6  (0--120 scale: 110)); Mandarin Chinese (fluent: TOCFL C2, 2020); Classical Chinese (reading, upper-intermediate)}
+\cvitem{Computer}{LaTeX; Prolog}
+%\cvitem{Music}{Training in piano and music composition (2015--2020); coursework in chamber music at National Taiwan Normal University}
+
 \end{document}
