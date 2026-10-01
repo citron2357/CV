@@ -1,84 +1,277 @@
-\documentclass[10pt,a4paper,serif,expansion=false]{moderncv}
+%-------------------------
+% Academic CV -- Shin JeongBean
+% Layout: Jake's Resume template (MIT License)
+%------------------------
 
+\documentclass[letterpaper,11pt]{article}
 
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% ---------- Theme ----------
-\moderncvstyle{classic}   % casual | classic | banking | oldstyle | fancy
-\moderncvcolor{blue}      % blue | orange | green | red | purple | grey | black
-\usepackage[scale=0.75]{geometry}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\resumeSummary}[1]{\par\vspace{5pt}{\leftskip=0.2in \rightskip=1in \noindent\small #1\par}\vspace{3pt}}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-% Width of the left ("date") column
-\setlength{\hintscolumnwidth}{2.6cm}
-\AtBeginDocument{\recomputecvlengths}
+\urlstyle{same}
 
-% ---------- Personal information ----------
-\name{}{Shin JeongBean}
-\title{Curriculum Vitae}
-\email{shinjeongbean@gmail.com / B10104030@ntu.edu.tw}
-% \homepage{...}          % personal website, if any
-\extrainfo{ORCID: 0009-0004-7856-142X}  % ORCID, if any
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\makecvtitle
 
-% ============================================================
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shin JeongBean} \\ \vspace{1pt}
+    \small
+    \href{mailto:shinjeongbean@gmail.com}{\underline{shinjeongbean@gmail.com}} $|$
+    \href{https://citron2357.github.io}{\underline{Homepage}} $|$
+    \href{https://philpeople.org/profiles/jeongbean-shin}{\underline{PhilPeople}} $|$
+    ORCID: \href{https://orcid.org/0009-0004-7856-142X}{\underline{0009-0004-7856-142X}}
+    % Secondary (NTU) address, currently not shown: B10104030@ntu.edu.tw
+\end{center}
+
+
+%-----------EDUCATION-----------
 \section{Education}
-\cventry{2021--present}{B.A.\ in Philosophy}{National Taiwan University}{Taipei, Taiwan}{\textit{GPA: 4.14/4.3} (3.97/4.0, with A+ counted as 4.0)}{Expected graduation: June 2027. Leave of absence for mandatory military service in South Korea, Oct 2023 \textbf{--} Apr 2025.}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Taiwan University}{Taipei, Taiwan}
+      {B.A.\ in Philosophy}{2021\textbf{--}present}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.14/4.3 (3.97/4.0, with A+ counted as 4.0)}
+        \resumeItem{Expected graduation: June 2027.}
+        \resumeItem{Leave of absence for mandatory military service in South Korea, Oct.\ 2023\textbf{--}Apr.\ 2025.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-% ============================================================
+
+%-----------AREAS OF INTEREST-----------
 \section{Areas of Interest}
-\cvitem{}{Metaphysics, Metametaphysics, Philosophical Logic, Philosophy of Art}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Metaphysics, Metametaphysics, Philosophical Logic, and Philosophy of Art
+    }}
+ \end{itemize}
 
-% ============================================================
+
+%-----------PRESENTATIONS-----------
 \section{Presentations}
-\cvitem{Nov 2026}{(forthcoming) \emph{Belief Revision with Truthmaker Semantics} (refereed). Taiwan Philosophical Association Annual Conference 2026, National Chung Cheng University, Chiayi, Taiwan.}
-\cvitem{Apr 2026}{\emph{Essentialism and the Essence of what it is to be Necessary} (refereed). TAPSC 2026, Soochow University, Taipei, Taiwan. (A version is under review at \emph{Philosophical Studies}.)}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\emph{Belief Revision in Truthmaker Semantics} (refereed)}{Nov.\ 2026 (forthcoming)}
+      {Taiwan Philosophical Association Annual Conference, National Chung Cheng University}{Chiayi, Taiwan}
+    \resumeSubheading
+      {\emph{Essentialism and the Essence of what it is to be Necessary} (refereed)}{Apr.\ 2026}
+      {TAPSC 2026, Soochow University}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{A version is under review at \emph{Philosophical Studies}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-% ===========================================================
+
+%-----------COMMENTARY-----------
 \section{Commentary}
-\cvitem{Apr 2026}{Commentator on Lin Siao-Ting, ``A Fragmentalist Passage of Time''. TAPSC 2026, Soochow University, Taipei, Taiwan.}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Commentator on Lin Siao-Ting, ``A Fragmentalist Passage of Time''}{Apr.\ 2026}
+      {TAPSC 2026, Soochow University}{Taipei, Taiwan}
+  \resumeSubHeadingListEnd
 
-% ============================================================
+
+%-----------TEACHING EXPERIENCE-----------
 \section{Teaching Experience}
-\cventry{Fall 2026}{Teaching Assistant \textmd{(in progress)}}{National Taiwan University}{PHL1921 \emph{Using AI to Tackle Philosophical Questions about Truth in Fiction}}{Instructor: Prof.\ Hsien-Chieh Nihel Jhou.}
-  {\footnotesize \textcolor{color1}{General-education course, taught in English. Deliver a short lecture and lead discussion in most of the weekly three-hour sessions; grading group presentations and the final exam.}}
-% ============================================================
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Teaching Assistant (in progress)}{Fall 2026}
+      {National Taiwan University}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{PHL1921, \emph{Using AI to Tackle Philosophical Questions about Truth in Fiction}}
+        \resumeItem{Instructor: Prof.\ Hsien-Chieh Nihel Jhou.}
+        \resumeItem{General-education course, taught in English. Deliver a short lecture and lead discussion in most of the weekly three-hour sessions; grade group presentations and the final exam.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------WORKS IN PROGRESS-----------
 \section{Works in Progress}
-% TODO: add advisor name to the thesis entry if desired.
-\cventry{}{\textmd{\emph{Essentialism and the Essence of what it is to be Necessary}}}{}{Under review at \emph{Philosophical Studies}, Springer}{}
-  {\footnotesize \textcolor{color1}{I argue that if necessity is grounded in essence, the necessity of essence should be essential to what it is to be necessary.}}
-\cventry{}{\textmd{\emph{Belief Revision with Truthmaker Semantics}}}{}{}{}
-  {\footnotesize \textcolor{color1}{I develop several hyperintensional AGM-style belief revision frameworks with the resources from Finean truthmaker semantics to model local rationality.}}
-\cventry{}{\textmd{\emph{Demystifying Anchoring}}}{}{B.A.\ thesis, National Taiwan University. Advisor: Prof.\ Duen-Min Deng.}{}
-  {\footnotesize \textcolor{color1}{I argue that anchoring need not be a \textit{sui generis} metaphysical relation by examining various possible cases of exportation.}}
-\cventry{}{\textmd{\emph{Abstract Object Theory and the Fictionally Fictional}}}{}{NSTC Research Project for College Students. Advisor: Prof.\ Hsien-Chieh Nihel Jhou.}{}
-  {\footnotesize \textcolor{color1}{I present a counterargument against Zalta's abstract object theory from the case of fictional fictions and their objects.}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\emph{Essentialism and the Essence of what it is to be Necessary}}
+      {\href{https://github.com/citron2357/Ess-Nec/blob/main/main.pdf}{\underline{[manuscript]}}}
+      {Under review at \emph{Philosophical Studies}, Springer}{}
+        \resumeSummary{Argues that if necessity is grounded in essence, the necessity of essence should obtain essentially of what it is to be necessary.}
+      
 
-% ============================================================
+    \resumeProjectHeading
+      {\textbf{\emph{Belief Revision in Truthmaker Semantics}}}
+      {\href{https://github.com/citron2357/Logic-of-belief-revision-with-truthmaker-semantics/blob/main/main.pdf}{\underline{[manuscript]}}}
+        \resumeSummary{Develops several hyperintensional AGM-style belief revision frameworks with the resources from Finean truthmaker semantics to model local rationality.}
+      
+
+    \resumeSubheading
+      {\emph{Demystifying Anchoring}}
+      {\href{https://github.com/citron2357/Demystifying-Anchoring/blob/main/main.pdf}{\underline{[unfinished manuscript]}}}
+      {B.A.\ thesis, National Taiwan University; advisor: Prof.\ Duen-Min Deng}{}
+        \resumeSummary{Argues that anchoring need not be a \textit{sui generis} metaphysical relation by examining various possible cases of exportation.}
+
+    \resumeSubheading
+      {\emph{Abstract Object Theory and the Fictionally Fictional}}
+      {\href{https://github.com/citron2357/AOTandFF/blob/main/Main.pdf}{\underline{[unfinished manuscript]}}}
+      {NSTC Research Project for College Students; advisor: Prof.\ Hsien-Chieh Nihel Jhou}{}
+        \resumeSummary{Presents a counterargument against Zalta's abstract object theory from the case of fictional fictions and their objects.}
+  \resumeSubHeadingListEnd
+
+
+%-----------GRADUATE COURSEWORK-----------
 \section{Graduate Coursework}
-\cvitem{Fall 2026}{PHL~7954, Hyperintensionalism (in progress)}
-\cvitem{Spring 2026}{PHL~7763, Epistemic Logic; PHL~7599, The Philosophy of Bertrand Russell, 1896--1900; PHL~7952, Zeno's Paradoxes; PHL~7558, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,185--693}
-\cvitem{Fall 2025}{PHL~7598, Essence and Essentialism; PHL~7557, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,1--184; PHL~7950, Machine Ethics}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Fall 2026}{: PHL~7954, Hyperintensionalism (in progress)} \\
+     \textbf{Spring 2026}{: PHL~7763, Epistemic Logic; PHL~7599, The Philosophy of Bertrand Russell, 1896--1900; PHL~7952, Zeno's Paradoxes; PHL~7558, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,185--693} \\
+     \textbf{Fall 2025}{: PHL~7598, Essence and Essentialism; PHL~7557, Wittgenstein's \emph{Philosophical Investigations}, \S\S\,1--184; PHL~7950, Machine Ethics}
+    }}
+ \end{itemize}
 
-% ============================================================
+
+%-----------SCHOLARSHIPS AND AWARDS-----------
 \section{Scholarships and Awards}
-\cvitem{2026}{National Science and Technology Council (NSTC) Research Project for College Students (research grant), Jul 2026 \textbf{--} Feb 2027.}
-\cventry{2026}{\textmd{National Taiwan University System President's Award}}{}{}{}{\footnotesize \textcolor{color1}{Newly established in 2026; awarded to international students at NTU, NTNU, and NTUST who received the Academic Achievement Award at least twice within four years.}}
-\cvitem{2023}{The 13th National Taiwan University Student Laureate for Philosophical Treatise, 4th prize.}
-\cvitem{2022, 2026}{NTU Scholarship for International Degree Students}
-\cventry{2021--23, 2025--26}{\textmd{Academic Achievement Award}}{}{}{{\small 2021 Fall; 2022 Fall; 2023 Spring; 2025 Fall; 2026 Spring}}{\footnotesize \textcolor{color1}{Awarded each semester to approximately the top 5\% of students in the department.}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Science and Technology Council (NSTC)}{Jul.\ 2026 \textbf{--} Feb.\ 2027}
+      {Research Project for College Students (research grant)}{}
 
-% ============================================================
+    \resumeProjectHeading
+      {\textbf{National Taiwan University System President's Award}}{2026}
+      \resumeItemListStart
+        \resumeItem{Newly established in 2026; awarded to international students at NTU, NTNU, and NTUST who received the Academic Achievement Award at least twice within four years.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{The 13th National Taiwan University Student Laureate for Philosophical Treatise}, 4th prize}{2023}
+
+    \resumeProjectHeading
+      {\textbf{NTU Scholarship for International Degree Students}}{2022, 2026}
+
+    \resumeProjectHeading
+      {Academic Achievement Award}{2021 Fall; 2022 Fall; 2023 Spring; 2025 Fall; 2026 Spring}
+      \resumeItemListStart
+        \resumeItem{Awarded each semester to approximately the top 5\% of students in the department.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------ACADEMIC ACTIVITIES-----------
 \section{Academic Activities}
-\cventry{2026--present}{NTU Logic}{Founder and Organizer}{}{}{\footnotesize \textcolor{color1}{Weekly reading group founded with 9 participants from philosophy and mathematics (undergraduate and graduate). Texts: Boolos et al.\ (2007), \emph{Computability and Logic}; Priest (2008), \emph{An Introduction to Non-Classical Logic}; Bacon (2023), \emph{A Philosophical Introduction to Higher-Order Logics}}}
-\cventry{2025--present}{Philosophy of Music Study Group}{Founder and Organizer}{}{}{\footnotesize \textcolor{color1}{Interdisciplinary reading group of six regular members (backgrounds in philosophy, art history, piano performance, and computer science), meeting biweekly on average; each session is devoted to a selected paper/book chapter in the philosophy of music.}}
-\cventry{Spring 2026}{Category Theory Study Group}{Participant}{}{}{{\footnotesize \textcolor{color1}{Biweekly reading group of undergraduate and graduate students; text: Smith (forthcoming), \emph{Category Theory: A Gentle Introduction.}}}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {NTU Logic}{2026 \textbf{--} present}
+      {Founder and Organizer}{}
+      \resumeItemListStart
+        \resumeItem{Weekly reading group founded with 9 participants from philosophy and mathematics (undergraduate and graduate). Texts: Boolos et al.\ (2007), \emph{Computability and Logic}; Priest (2008), \emph{An Introduction to Non-Classical Logic}; Bacon (2023), \emph{A Philosophical Introduction to Higher-Order Logics}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Philosophy of Music Study Group}{2025 Fall \textbf{--} present}
+      {Founder and Organizer}{}
+      \resumeItemListStart
+        \resumeItem{Interdisciplinary reading group of 6 regular members (backgrounds in philosophy, art history, piano performance, and computer science), meeting biweekly on average; each session is devoted to a selected paper/book chapter in the philosophy of music.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Category Theory Study Group}{Spring 2026}
+      {Participant}{}
+      \resumeItemListStart
+        \resumeItem{Biweekly reading group of undergraduate and graduate students; text: Smith (forthcoming), \emph{Category Theory: A Gentle Introduction}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 
-% ============================================================
+%-----------SKILLS-----------
 \section{Skills}
-\cvitem{Languages}{Korean (native); English (fluent: TOEFL iBT, July 2026: 5.5/6  (0--120 scale: 110)); Mandarin Chinese (fluent: TOCFL C2, 2020); Classical Chinese (reading, upper-intermediate)}
-\cvitem{Computer}{LaTeX; Prolog}
-%\cvitem{Music}{Training in piano and music composition (2015--2020); coursework in chamber music at National Taiwan Normal University}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Korean (native); English (fluent; TOEFL iBT: 5.5/6 (0--120 scale: 110), July 2026); Mandarin Chinese (fluent; TOCFL C2, 2020); Classical Chinese (reading, upper-intermediate)} \\
+     \textbf{Computer}{: LaTeX; Prolog} \\
+     \textbf{Music}{: Training in piano and music composition (2015--2020); coursework in chamber music at National Taiwan Normal University}
+    }}
+ \end{itemize}
 
+
+%-------------------------------------------
 \end{document}
